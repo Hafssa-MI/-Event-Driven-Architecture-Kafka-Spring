@@ -40,3 +40,21 @@
 - Création du package handlers
 - Création de la classe PageEventHandler comme un @Component
 - création d'une méthode @Bean dans cette classe qui retourne un Consumer<PageEvent> qui va faire un subscribe à un topic qu'on va spécifier dans l'application.properties en déclarant le bean comme étant fonction
+
+#### 2.3 Création d'un Supplier
+
+- Un supplier c'est un producersous forme d'un pooler qui permet de produire des messages au bout de chaque seconde par défaut
+- Il crée un PageEvent et l'envoie vers un topicKafka , il n'a pas d'input mais il a un output
+- configuration du topic du destination et déclarer le bean comme fonction dans le fichier properties.yml et regler le timer en 200ms
+![img_4.png](img_4.png)
+
+
+#### 2.3 Création d'un Kafka Stream
+
+- Création d'un Kafka Stream pour le real time processing
+- création d'un Bean fonction qui a des entrées et sortie KStream
+- configuration dans le fichie properties de la meme facon
+- consommation dans le terminal avec une commande kafka console stream
+  ![img_5.png](img_5.png)
+
+![img_5.png](img_5.png)
