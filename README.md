@@ -30,4 +30,13 @@
 #### 2.1 Création du controller et PageEvent
 
 - Création du package controllers contenant un @RestController PAgeEventController avec une méthode qui permet de publier un event dans un topic Kafka en utilisant un StreamBridge qui est un SpringCloudStream
+- Test avec l'URL en utilisant kafka consumer:
+  localhost:8080/publish?name=P1&topic=T2
+    ![img_2.png](img_2.png)
+    ![img_3.png](img_3.png)
 
+#### 2.2 Création de notre propre consumer
+
+- Création du package handlers
+- Création de la classe PageEventHandler comme un @Component
+- création d'une méthode @Bean dans cette classe qui retourne un Consumer<PageEvent> qui va faire un subscribe à un topic qu'on va spécifier dans l'application.properties en déclarant le bean comme étant fonction
