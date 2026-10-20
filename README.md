@@ -57,4 +57,13 @@
 - consommation dans le terminal avec une commande kafka console stream
   ![img_5.png](img_5.png)
 
-![img_5.png](img_5.png)
+
+#### 2.4 Visualiser le stream processing
+
+- L'ajout du Materliazedas("count-store") à l'intérieur de .count()
+- Dans le controlleru création d'une fonction qui va lire le count-store et afficher. En déclarant un interactiveQueryService
+- Création du fichier html ans le folder static à l'intérieur des ressources en utilisant la librairie smoothie.js
+
+![img_6.png](img_6.png) <br>
+
+![img_7.png](img_7.png)
